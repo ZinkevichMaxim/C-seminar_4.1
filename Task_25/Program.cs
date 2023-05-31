@@ -4,6 +4,11 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+int a = Prompt("Введите число А");
+int b = Prompt("Введите число B");
+AinB(a, b);
+
+
 int Prompt(string msg)
 {
 Console.WriteLine(msg);
@@ -11,9 +16,9 @@ int nom = int.Parse(Console.ReadLine());
 return nom;
 } 
 
-int a = Prompt("Введите число А");
-int b = Prompt("Введите число B");
 
+void AinB(int a, int b)
+{
 int ainb = 1;
 while(b > 0)
 {
@@ -22,5 +27,6 @@ while(b > 0)
 }
     
 Console.WriteLine(ainb);
+}
 
 
