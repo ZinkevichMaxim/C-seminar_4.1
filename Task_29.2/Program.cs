@@ -7,28 +7,44 @@
 
 int Prompt(string msg)       // Работает
 {
-Console.WriteLine (msg);
-int digit = int.Parse(Console.ReadLine());
-return digit;
+    Console.WriteLine(msg);
+    int digit = int.Parse(Console.ReadLine());
+    return digit;
 }
 
-// int nomber = Prompt("Введите целое число");
+// int nomber = Prompt("Введите целое число");        // Работает
 // Console.WriteLine($"Вы ввели число {nomber}");    // Работает
-int n = Prompt("Введите длину массива");
-int[] array = new int [n];
-Console.WriteLine($"{array[1]}");            //  Работает
-Console.WriteLine(array.Length);        //   Работает
+int n = Prompt("Введите длину массива");             // Объявление массива
+int[] array = new int[n];                           // Объявление массива
+// Console.WriteLine($"{array[1]}");            //  Работает
+// Console.WriteLine(array.Length);        //   Работает
 
-int nomber = 0;
-int index = 0;
-// int Lenght = n;
-while (index < n)
+void FillArray(int[] collection)
 {
-    nomber = Prompt("Введите число");
-    array[index] = nomber;
-    index++;
+    int nomber = 0;
+    int index = 0;
+    while (index < n)
+    {
+        nomber = Prompt("Введите число");
+        array[index] = nomber;
+        index++;
+    }
 }
-Console.Write($"{array[1]} {array[3]}");
+// Console.Write($"{array[1]} {array[3]}");   // работает
 
+void PrintArray(int[] col)
+{
+    int count = n;
+    int position = 0;
+    while (position < count)
+    {
+        Console.Write($"{array[position]}, ");
+        position++;
+    }
+}
+
+int[] NewArray = new int [n]; // Объявление массива
+FillArray(NewArray);          // Наполнение массива
+PrintArray(NewArray);         // Печать массива
 
 
